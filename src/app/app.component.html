@@ -1,7 +1,5 @@
-<!-- <label>
-  Name:
-  <input type="text" [formControl]="name">
-</label> -->
+<p class="heading"> Normal form control
+</p>
 <label> 
   Name:
   <input type="text" [formControl]="name">
@@ -12,3 +10,22 @@
 <p>
   value: {{name1}}
   </p>
+
+
+  <p class="heading">Grouping form controls</p>
+
+<form [formGroup]="gropingForm">
+<label> FirstName
+<input type="text" formControlName="firstName">
+</label>
+<br>
+<label> Last Name
+<input type="text" formControlName= "lastName">
+</label>
+<br>
+<button (click)="updateFormgroup()">Click</button>
+<br>
+<p>
+Name :{{fN+lN}}
+</p>
+</form>
